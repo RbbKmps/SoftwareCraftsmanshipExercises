@@ -1,29 +1,32 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class JSONProcessor extends DataProcessor {
 
-    private final List<String> data = new ArrayList<>();
+    private Map<String, Object> data;
 
     @Override
-    protected void loadData() {
+    protected void load() {
         System.out.println("Loading data from JSON...");
-        data.add("{\"name\":\"apple\"}");
-        data.add("{\"name\":\"banana\"}");
-        data.add("{\"name\":\"cherry\"}");
+        data = new HashMap<>();
+        data.put("name", "Laptop");
+        data.put("price", 1200);
     }
 
     @Override
-    protected void transformData() {
-        System.out.println("Adding timestamp to each JSON record...");
-        long ts = System.currentTimeMillis();
-
-        data.replaceAll(record -> record.replace("}", ", \"timestamp\": " + ts + "}"));
+    protected void transform() {
+        System.out.println("Adding timestamp to JSON...");
+        data.put("timestamp", System.currentTimeMillis());
     }
 
     @Override
-    protected void saveData() {
-        System.out.println("Saving new JSON file:");
-        data.forEach(System.out::println);
+    protected void save() {
+        System.out.println("Saving JSON data...");
+        System.out.println(data);
+    }
+
+    @Override
+    protected boolean validateData() {
+        System.out.println("Validating JSON data...");
+        return data.containsKey("name");
     }
 }

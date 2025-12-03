@@ -6,7 +6,7 @@ public class CSVProcessor extends DataProcessor {
     private final List<String> data = new ArrayList<>();
 
     @Override
-    protected void loadData() {
+    protected void load() {
         System.out.println("Loading data from CSV...");
         data.add("apple");
         data.add("banana");
@@ -14,13 +14,13 @@ public class CSVProcessor extends DataProcessor {
     }
 
     @Override
-    protected void transformData() {
+    protected void transform() {
         System.out.println("Transforming CSV data to upper-case...");
         data.replaceAll(String::toUpperCase);
     }
 
     @Override
-    protected void saveData() {
+    protected void save() {
         System.out.println("Saving new CSV file:");
         data.forEach(System.out::println);
     }

@@ -1,11 +1,20 @@
 public abstract class DataProcessor {
     public final void process() {
-        loadData();
-        transformData();
-        saveData();
+        load();
+
+        if (validateData()) {
+            transform();
+            save();
+        } else {
+            System.err.println("Data validation failed. Processing aborted.");
+        }
     }
 
-    protected abstract void loadData();
-    protected abstract void transformData();
-    protected abstract void saveData();
+    protected abstract void load();
+    protected abstract void transform();
+    protected abstract void save();
+
+    protected boolean validateData() {
+        return true;
+    }
 }

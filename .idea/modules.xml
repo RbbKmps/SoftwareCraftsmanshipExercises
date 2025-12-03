@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DataProcessingPipeline/DataProcessingPipeline.iml" filepath="$PROJECT_DIR$/DataProcessingPipeline/DataProcessingPipeline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PartialGameController/GameController.iml" filepath="$PROJECT_DIR$/PartialGameController/GameController.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UsingObserverPattern/UsingObserverPatterns.iml" filepath="$PROJECT_DIR$/UsingObserverPattern/UsingObserverPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PartialGameController/PartialGameController.iml" filepath="$PROJECT_DIR$/PartialGameController/PartialGameController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UsingObserverPattern/UsingObserverPattern.iml" filepath="$PROJECT_DIR$/UsingObserverPattern/UsingObserverPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/exercises.iml" filepath="$PROJECT_DIR$/.idea/exercises.iml" />
     </modules>
   </component>
